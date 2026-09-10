@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="55%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#64748b" stroke-opacity=".12"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="360" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#grid)"/>
+
+  <!-- Ambient lights -->
+  <g opacity=".45" filter="url(#glow)">
+    <circle cx="130" cy="80" r="3" fill="#7dd3fc"/>
+    <circle cx="1050" cy="75" r="3" fill="#a78bfa"/>
+    <circle cx="980" cy="285" r="2.5" fill="#67e8f9"/>
+    <circle cx="190" cy="285" r="2.5" fill="#c4b5fd"/>
+  </g>
+
+  <!-- Neural network -->
+  <g fill="none" stroke="#64748b" stroke-opacity=".35" stroke-width="1.2">
+    <path d="M70 145 L180 105 L270 150 L365 92"/>
+    <path d="M70 215 L180 105 L270 225 L365 92"/>
+    <path d="M70 215 L180 260 L270 225 L365 270"/>
+    <path d="M1130 145 L1020 105 L930 150 L835 92"/>
+    <path d="M1130 215 L1020 105 L930 225 L835 92"/>
+    <path d="M1130 215 L1020 260 L930 225 L835 270"/>
+  </g>
+
+  <g fill="#94a3b8" filter="url(#glow)">
+    <circle cx="70" cy="145" r="4"/><circle cx="180" cy="105" r="5"/>
+    <circle cx="270" cy="150" r="4"/><circle cx="365" cy="92" r="5"/>
+    <circle cx="70" cy="215" r="4"/><circle cx="180" cy="260" r="4"/>
+    <circle cx="270" cy="225" r="5"/><circle cx="365" cy="270" r="4"/>
+    <circle cx="1130" cy="145" r="4"/><circle cx="1020" cy="105" r="5"/>
+    <circle cx="930" cy="150" r="4"/><circle cx="835" cy="92" r="5"/>
+    <circle cx="1130" cy="215" r="4"/><circle cx="1020" cy="260" r="4"/>
+    <circle cx="930" cy="225" r="5"/><circle cx="835" cy="270" r="4"/>
+  </g>
+
+  <!-- Animated data pulses -->
+  <g fill="#7dd3fc">
+    <circle r="3">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M70 145 L180 105 L270 150 L365 92"/>
+    </circle>
+    <circle r="3">
+      <animateMotion dur="3.7s" repeatCount="indefinite" path="M1130 215 L1020 260 L930 225 L835 270"/>
+    </circle>
+  </g>
+
+  <!-- Main title -->
+  <text x="600" y="145" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="64" font-weight="800" letter-spacing="8"
+        fill="url(#text)" filter="url(#glow)">HARRYSIJO</text>
+
+  <text x="600" y="178" text-anchor="middle"
+        font-family="monospace" font-size="16" letter-spacing="5"
+        fill="#cbd5e1">CSE • AI/ML • BUILDER</text>
+
+  <text x="600" y="215" text-anchor="middle"
+        font-family="monospace" font-size="13" letter-spacing="3"
+        fill="#7dd3fc">
+    INITIALIZING INTELLIGENCE...
+    <animate attributeName="opacity" values=".25;1;.25" dur="1.8s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Tech labels -->
+  <g font-family="monospace" font-size="11" fill="#94a3b8" text-anchor="middle">
+    <text x="120" y="315">PYTHON</text>
+    <text x="240" y="315">AI / ML</text>
+    <text x="360" y="315">C++</text>
+    <text x="480" y="315">OPENCV</text>
+    <text x="600" y="315">TENSORFLOW</text>
+    <text x="720" y="315">DSA</text>
+    <text x="840" y="315">WEB</text>
+    <text x="960" y="315">GIT</text>
+    <text x="1080" y="315">SYSTEMS</text>
+  </g>
+
+  <g stroke="#475569" stroke-opacity=".45">
+    <line x1="80" y1="326" x2="1120" y2="326"/>
+  </g>
+
+  <text x="600" y="345" text-anchor="middle"
+        font-family="monospace" font-size="9" letter-spacing="4"
+        fill="#64748b">BUILD • LEARN • EXPERIMENT • REPEAT</text>
+
+  <!-- Scan line -->
+  <rect x="40" y="45" width="1120" height="1" fill="#7dd3fc" opacity=".15">
+    <animate attributeName="y" values="45;315;45" dur="6s" repeatCount="indefinite"/>
+  </rect>
+</svg>
